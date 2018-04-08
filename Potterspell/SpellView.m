@@ -25,6 +25,8 @@
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
     
+    CGFloat xFact = self.frame.size.width / 1024;
+    CGFloat yFact = self.frame.size.height / 768;
     
     CGContextRef myContext  = [[NSGraphicsContext // 1
                           currentContext] graphicsPort];
@@ -34,13 +36,13 @@
     
     [[self pixels] enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSPoint point = ((NSValue*)obj).pointValue;
-        CGContextFillRect(myContext, CGRectMake(point.x, point.y, 5, 5));
+        CGContextFillRect(myContext, CGRectMake((1024 - point.x) * xFact, point.y * yFact, 5, 5));
     }];
     
     CGContextSetRGBFillColor (myContext, 0, 1, 0, 1);
     [[self pixels2] enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSPoint point = ((NSValue*)obj).pointValue;
-        CGContextFillRect(myContext, CGRectMake(point.x, point.y, 5, 5));
+        CGContextFillRect(myContext, CGRectMake((1024 - point.x) * xFact, point.y * yFact, 5, 5));
     }];
 }
 
@@ -52,6 +54,11 @@
 -(void) addPoint2:(NSPoint)point {
     [self.pixels2 addObject:[NSValue valueWithPoint:point]];
 
+}
+
+-(void) clearPoints {
+    [self.pixels removeAllObjects];
+    [self.pixels2 removeAllObjects];
 }
 
 @end

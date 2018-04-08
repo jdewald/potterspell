@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A408C6D82071CB5800B3B7C5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A408C6D72071CB5800B3B7C5 /* AppDelegate.m */; };
-		A408C6DB2071CB5800B3B7C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A408C6DA2071CB5800B3B7C5 /* main.m */; };
-		A408C6DE2071CB5800B3B7C5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A408C6DD2071CB5800B3B7C5 /* ViewController.m */; };
-		A408C6E02071CB5800B3B7C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A408C6DF2071CB5800B3B7C5 /* Assets.xcassets */; };
-		A408C6E32071CB5800B3B7C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A408C6E12071CB5800B3B7C5 /* Main.storyboard */; };
 		A408C6EE2071CB5900B3B7C5 /* PotterspellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A408C6ED2071CB5900B3B7C5 /* PotterspellTests.m */; };
 		A408C6F92071CB5900B3B7C5 /* PotterspellUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A408C6F82071CB5900B3B7C5 /* PotterspellUITests.m */; };
-		A408C70F2071CF5800B3B7C5 /* SpellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A408C70E2071CF5800B3B7C5 /* SpellView.m */; };
 		A493335D2079F06000CEDC42 /* OCLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A493335B2079F06000CEDC42 /* OCLog.framework */; };
 		A493335E2079F06000CEDC42 /* Wiimote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A493335C2079F06000CEDC42 /* Wiimote.framework */; };
+		A49333AA207A5FBC00CEDC42 /* PennyPincher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A49333A9207A5FBC00CEDC42 /* PennyPincher.framework */; };
+		A49333C5207A63D400CEDC42 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A49333BB207A63D400CEDC42 /* AppDelegate.m */; };
+		A49333C6207A63D400CEDC42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A49333BC207A63D400CEDC42 /* Assets.xcassets */; };
+		A49333C7207A63D400CEDC42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A49333BD207A63D400CEDC42 /* Main.storyboard */; };
+		A49333C8207A63D400CEDC42 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A49333BF207A63D400CEDC42 /* Info.plist */; };
+		A49333C9207A63D400CEDC42 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A49333C0207A63D400CEDC42 /* main.m */; };
+		A49333CA207A63D400CEDC42 /* SpellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A49333C2207A63D400CEDC42 /* SpellView.m */; };
+		A49333CB207A63D400CEDC42 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A49333C4207A63D400CEDC42 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,24 +40,25 @@
 
 /* Begin PBXFileReference section */
 		A408C6D32071CB5800B3B7C5 /* Potterspell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Potterspell.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A408C6D62071CB5800B3B7C5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		A408C6D72071CB5800B3B7C5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A408C6DA2071CB5800B3B7C5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A408C6DC2071CB5800B3B7C5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A408C6DD2071CB5800B3B7C5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A408C6DF2071CB5800B3B7C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A408C6E22071CB5800B3B7C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A408C6E42071CB5800B3B7C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A408C6E92071CB5900B3B7C5 /* PotterspellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PotterspellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A408C6ED2071CB5900B3B7C5 /* PotterspellTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PotterspellTests.m; sourceTree = "<group>"; };
 		A408C6EF2071CB5900B3B7C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A408C6F42071CB5900B3B7C5 /* PotterspellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PotterspellUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A408C6F82071CB5900B3B7C5 /* PotterspellUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PotterspellUITests.m; sourceTree = "<group>"; };
 		A408C6FA2071CB5900B3B7C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A408C70D2071CF5800B3B7C5 /* SpellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpellView.h; sourceTree = "<group>"; };
-		A408C70E2071CF5800B3B7C5 /* SpellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpellView.m; sourceTree = "<group>"; };
 		A493335B2079F06000CEDC42 /* OCLog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCLog.framework; path = ../other/wjoy/OCLog/build/Debug/OCLog.framework; sourceTree = "<group>"; };
 		A493335C2079F06000CEDC42 /* Wiimote.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Wiimote.framework; path = ../other/wjoy/Wiimote/build/Debug/Wiimote.framework; sourceTree = "<group>"; };
+		A49333A9207A5FBC00CEDC42 /* PennyPincher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PennyPincher.framework; path = ../other/PennyPincher/build/Debug/PennyPincher.framework; sourceTree = "<group>"; };
+		A49333BA207A63D400CEDC42 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A49333BB207A63D400CEDC42 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A49333BC207A63D400CEDC42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A49333BE207A63D400CEDC42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A49333BF207A63D400CEDC42 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A49333C0207A63D400CEDC42 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A49333C1207A63D400CEDC42 /* SpellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpellView.h; sourceTree = "<group>"; };
+		A49333C2207A63D400CEDC42 /* SpellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpellView.m; sourceTree = "<group>"; };
+		A49333C3207A63D400CEDC42 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A49333C4207A63D400CEDC42 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A49333AA207A5FBC00CEDC42 /* PennyPincher.framework in Frameworks */,
 				A493335D2079F06000CEDC42 /* OCLog.framework in Frameworks */,
 				A493335E2079F06000CEDC42 /* Wiimote.framework in Frameworks */,
 			);
@@ -88,7 +92,7 @@
 		A408C6CA2071CB5800B3B7C5 = {
 			isa = PBXGroup;
 			children = (
-				A408C6D52071CB5800B3B7C5 /* Potterspell */,
+				A49333B9207A63D400CEDC42 /* Potterspell */,
 				A408C6EC2071CB5900B3B7C5 /* PotterspellTests */,
 				A408C6F72071CB5900B3B7C5 /* PotterspellUITests */,
 				A408C6D42071CB5800B3B7C5 /* Products */,
@@ -104,31 +108,6 @@
 				A408C6F42071CB5900B3B7C5 /* PotterspellUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		A408C6D52071CB5800B3B7C5 /* Potterspell */ = {
-			isa = PBXGroup;
-			children = (
-				A408C6D62071CB5800B3B7C5 /* AppDelegate.h */,
-				A408C6D72071CB5800B3B7C5 /* AppDelegate.m */,
-				A408C6DC2071CB5800B3B7C5 /* ViewController.h */,
-				A408C6DD2071CB5800B3B7C5 /* ViewController.m */,
-				A408C6DF2071CB5800B3B7C5 /* Assets.xcassets */,
-				A408C6E12071CB5800B3B7C5 /* Main.storyboard */,
-				A408C6E42071CB5800B3B7C5 /* Info.plist */,
-				A408C6D92071CB5800B3B7C5 /* Supporting Files */,
-				A408C70D2071CF5800B3B7C5 /* SpellView.h */,
-				A408C70E2071CF5800B3B7C5 /* SpellView.m */,
-			);
-			path = Potterspell;
-			sourceTree = "<group>";
-		};
-		A408C6D92071CB5800B3B7C5 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A408C6DA2071CB5800B3B7C5 /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		A408C6EC2071CB5900B3B7C5 /* PotterspellTests */ = {
@@ -152,10 +131,28 @@
 		A408C7062071CB6A00B3B7C5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A49333A9207A5FBC00CEDC42 /* PennyPincher.framework */,
 				A493335B2079F06000CEDC42 /* OCLog.framework */,
 				A493335C2079F06000CEDC42 /* Wiimote.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A49333B9207A63D400CEDC42 /* Potterspell */ = {
+			isa = PBXGroup;
+			children = (
+				A49333BA207A63D400CEDC42 /* AppDelegate.h */,
+				A49333BB207A63D400CEDC42 /* AppDelegate.m */,
+				A49333BC207A63D400CEDC42 /* Assets.xcassets */,
+				A49333BD207A63D400CEDC42 /* Main.storyboard */,
+				A49333BF207A63D400CEDC42 /* Info.plist */,
+				A49333C0207A63D400CEDC42 /* main.m */,
+				A49333C1207A63D400CEDC42 /* SpellView.h */,
+				A49333C2207A63D400CEDC42 /* SpellView.m */,
+				A49333C3207A63D400CEDC42 /* ViewController.h */,
+				A49333C4207A63D400CEDC42 /* ViewController.m */,
+			);
+			path = Potterspell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,17 +223,20 @@
 					A408C6D22071CB5800B3B7C5 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = V3B573VB3S;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					A408C6E82071CB5900B3B7C5 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = V3B573VB3S;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = A408C6D22071CB5800B3B7C5;
 					};
 					A408C6F32071CB5900B3B7C5 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = V3B573VB3S;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = A408C6D22071CB5800B3B7C5;
 					};
@@ -267,8 +267,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A408C6E02071CB5800B3B7C5 /* Assets.xcassets in Resources */,
-				A408C6E32071CB5800B3B7C5 /* Main.storyboard in Resources */,
+				A49333C6207A63D400CEDC42 /* Assets.xcassets in Resources */,
+				A49333C7207A63D400CEDC42 /* Main.storyboard in Resources */,
+				A49333C8207A63D400CEDC42 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,10 +294,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A408C6DE2071CB5800B3B7C5 /* ViewController.m in Sources */,
-				A408C70F2071CF5800B3B7C5 /* SpellView.m in Sources */,
-				A408C6DB2071CB5800B3B7C5 /* main.m in Sources */,
-				A408C6D82071CB5800B3B7C5 /* AppDelegate.m in Sources */,
+				A49333C9207A63D400CEDC42 /* main.m in Sources */,
+				A49333C5207A63D400CEDC42 /* AppDelegate.m in Sources */,
+				A49333CB207A63D400CEDC42 /* ViewController.m in Sources */,
+				A49333CA207A63D400CEDC42 /* SpellView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,10 +333,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A408C6E12071CB5800B3B7C5 /* Main.storyboard */ = {
+		A49333BD207A63D400CEDC42 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A408C6E22071CB5800B3B7C5 /* Base */,
+				A49333BE207A63D400CEDC42 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -437,11 +438,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = V3B573VB3S;
 				INFOPLIST_FILE = Potterspell/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.poppyandzoey.Potterspell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -450,11 +453,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = V3B573VB3S;
 				INFOPLIST_FILE = Potterspell/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.poppyandzoey.Potterspell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -468,6 +473,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.poppyandzoey.PotterspellTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Potterspell.app/Contents/MacOS/Potterspell";
 			};
 			name = Debug;
@@ -482,6 +488,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.poppyandzoey.PotterspellTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Potterspell.app/Contents/MacOS/Potterspell";
 			};
 			name = Release;
@@ -495,6 +502,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.poppyandzoey.PotterspellUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Potterspell;
 			};
 			name = Debug;
@@ -508,6 +516,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.poppyandzoey.PotterspellUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Potterspell;
 			};
 			name = Release;

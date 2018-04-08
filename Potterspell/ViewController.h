@@ -7,9 +7,16 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "SpellView.h"
 
 @interface ViewController : NSViewController
 
+@property (weak) IBOutlet SpellView* spellView;
+@property (weak) IBOutlet NSTextField* spellNameField;
+@property (weak) IBOutlet NSTextField* recognizedSpellNameLabel;
 
+-(IBAction)addButtonPressed:(id)sender;
+-(IBAction)clearButtonPressed:(id)sender;
+-(IBAction)recognizeTogglePressed:(id)sender;
 @end
 

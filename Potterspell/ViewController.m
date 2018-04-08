@@ -10,9 +10,15 @@
 #import <Wiimote/Wiimote.h>
 #import <OCLog/OCLog.h>
 #import "SpellView.h"
+#import <PennyPincher/PennyPincher-Swift.h>
 
 
-@implementation ViewController
+@implementation ViewController {
+    PennyPincher* pennyPincher;
+    BOOL recognizing;
+    NSMutableArray* templates;
+   
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -20,6 +26,9 @@
     [self attachToWiimote];
     
     // Do any additional setup after loading the view.
+    pennyPincher = [[PennyPincher alloc] init];
+    recognizing = false;
+    templates = [[NSMutableArray alloc] initWithCapacity:10];
 }
 
 
@@ -50,6 +59,7 @@
     [Wiimote setUseOneButtonClickConnection:YES]; // ;)
     [Wiimote beginDiscovery]; // begin wait for new wiimotes (what not paired). 30 sec.
     // If wiimote already paired, it can be connected without discovering.
+
     
     return self;
 }
@@ -95,11 +105,12 @@
     
     NSLog(@"Processed point change: %i, %f, %f", [point index], [point position].x, [point position].y);
     if (point.index == 0) {
-        [((SpellView*)[self view]) addPoint:nsPoint];
+        [self.spellView addPoint:nsPoint];
     } else {
-        [((SpellView*)[self view]) addPoint2:nsPoint];
+        [self.spellView addPoint2:nsPoint];
 
     }
+    [[self spellView] setNeedsDisplay:YES];
     [[self view] setNeedsDisplay:YES];
 }
 
@@ -107,6 +118,40 @@
 {
     // debug message
     NSLog(@"Wiimote disconnected: %@ (%@)", [wiimote modelName], [wiimote addressString]);
+}
+
+//----
+- (void)addButtonPressed:(id)sender
+{
+    [templates addObject:[PennyPincher createTemplate:self.spellNameField.stringValue
+                          points:self.spellView.pixels]];
+    [self clearButtonPressed:sender];
+
+}
+
+- (void) clearButtonPressed:(id)sender {
+    [self.spellView clearPoints];
+    [[self spellView] setNeedsDisplay:YES];
+    [[self view] setNeedsDisplay:YES];
+}
+
+- (void) recognizeTogglePressed:(id)sender {
+    recognizing = ! recognizing;
+    
+    if (recognizing) {
+        [sender setTitle:@"Recognize"];
+    }
+    if (! recognizing) {
+        [sender setTitle:@"Start"];
+    
+        PennyPincherResult* result =[PennyPincher recognize:[[self spellView].pixels copy] templates:templates];
+        if (result != nil) {
+            NSLog(@"Recognize value: %@", result);
+            self.recognizedSpellNameLabel.stringValue = result.template.id;
+        }
+ 
+    }
+    
 }
 
 @end

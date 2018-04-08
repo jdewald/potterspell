@@ -13,4 +13,5 @@
 @property NSMutableArray *pixels2;
 -(void) addPoint:(NSPoint)point;
 -(void) addPoint2:(NSPoint)point;
+-(void) clearPoints;
 @end
