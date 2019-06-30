@@ -18,5 +18,6 @@
 -(IBAction)addButtonPressed:(id)sender;
 -(IBAction)clearButtonPressed:(id)sender;
 -(IBAction)recognizeTogglePressed:(id)sender;
+-(IBAction)toggleLiveMode:(id)sender;
 @end
 

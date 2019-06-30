@@ -16,6 +16,8 @@
 @implementation ViewController {
     PennyPincher* pennyPincher;
     BOOL recognizing;
+    BOOL liveMode;
+    NSTimer *recognizeTimer;
     NSMutableArray* templates;
    
 }
@@ -78,7 +80,7 @@
     
     // begin listen events from wiimote (see WiimoteDelegate.h)
     [wiimote setDelegate:self];
-    [[wiimote accelerometer] setEnabled:YES]; // and enable accelerometer
+    [[wiimote accelerometer] setEnabled:NO]; // and enable accelerometer
     [wiimote setIREnabled:YES]; // we want to know about IR changes
     
 }
@@ -112,6 +114,21 @@
     }
     [[self spellView] setNeedsDisplay:YES];
     [[self view] setNeedsDisplay:YES];
+    
+    if (liveMode) {
+        if (recognizeTimer != nil) {
+            [recognizeTimer invalidate];
+            recognizeTimer = nil;
+        
+        }
+        recognizeTimer = [NSTimer scheduledTimerWithTimeInterval:(NSTimeInterval)0.5 repeats:false block:^(NSTimer * _Nonnull timer) {
+            NSLog(@"Live mode recognize timer fired");
+            [self recognize];
+            [self clearButtonPressed:nil];
+        }];
+    }
+
+
 }
 
 - (void)wiimoteDisconnected:(Wiimote*)wiimote
@@ -135,23 +152,53 @@
     [[self view] setNeedsDisplay:YES];
 }
 
+- (void) startRecognizing {
+    recognizing = true;
+}
+
+- (void) recognize {
+    PennyPincherResult* result =[PennyPincher recognize:[[self spellView].pixels copy] templates:templates];
+    if (result != nil) {
+        NSLog(@"Recognize value: %@", result);
+        self.recognizedSpellNameLabel.stringValue = result.template.id;
+        
+        
+        // Create the request.
+        NSString *baseURL = @"http://127.0.0.1:3000/";
+        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[baseURL stringByAppendingString:result.template.id]]];
+        
+        
+        NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    }
+}
 - (void) recognizeTogglePressed:(id)sender {
     recognizing = ! recognizing;
     
     if (recognizing) {
         [sender setTitle:@"Recognize"];
+        
     }
+
     if (! recognizing) {
         [sender setTitle:@"Start"];
+        [self recognize];
+
     
-        PennyPincherResult* result =[PennyPincher recognize:[[self spellView].pixels copy] templates:templates];
-        if (result != nil) {
-            NSLog(@"Recognize value: %@", result);
-            self.recognizedSpellNameLabel.stringValue = result.template.id;
-        }
+        
  
     }
     
 }
 
+// Toggle whether or not we are in "live" mode, which corresponds
+// to whether we want to automatically try to recognize spells
+-(void) toggleLiveMode:(id)sender {
+    if ([sender state] == NSOnState) {
+        liveMode = true;
+        NSLog(@"Entered live mode");
+    } else {
+        liveMode = false;
+        NSLog(@"Exited live mode");
+    }
+}
 @end
