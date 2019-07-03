@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A408C6EE2071CB5900B3B7C5 /* PotterspellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A408C6ED2071CB5900B3B7C5 /* PotterspellTests.m */; };
 		A408C6F92071CB5900B3B7C5 /* PotterspellUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A408C6F82071CB5900B3B7C5 /* PotterspellUITests.m */; };
+		A42D94DC22C979E0005134C8 /* SpellStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42D94DB22C979E0005134C8 /* SpellStorage.swift */; };
+		A42D94DF22CC3515005134C8 /* PotterspellSetupController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42D94DE22CC3515005134C8 /* PotterspellSetupController.m */; };
 		A493335D2079F06000CEDC42 /* OCLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A493335B2079F06000CEDC42 /* OCLog.framework */; };
 		A493335E2079F06000CEDC42 /* Wiimote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A493335C2079F06000CEDC42 /* Wiimote.framework */; };
 		A49333AA207A5FBC00CEDC42 /* PennyPincher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A49333A9207A5FBC00CEDC42 /* PennyPincher.framework */; };
@@ -46,6 +48,10 @@
 		A408C6F42071CB5900B3B7C5 /* PotterspellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PotterspellUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A408C6F82071CB5900B3B7C5 /* PotterspellUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PotterspellUITests.m; sourceTree = "<group>"; };
 		A408C6FA2071CB5900B3B7C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A42D94DA22C979E0005134C8 /* Potterspell-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Potterspell-Bridging-Header.h"; sourceTree = "<group>"; };
+		A42D94DB22C979E0005134C8 /* SpellStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellStorage.swift; sourceTree = "<group>"; };
+		A42D94DD22CC3515005134C8 /* PotterspellSetupController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PotterspellSetupController.h; sourceTree = "<group>"; };
+		A42D94DE22CC3515005134C8 /* PotterspellSetupController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PotterspellSetupController.m; sourceTree = "<group>"; };
 		A493335B2079F06000CEDC42 /* OCLog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCLog.framework; path = ../other/wjoy/OCLog/build/Debug/OCLog.framework; sourceTree = "<group>"; };
 		A493335C2079F06000CEDC42 /* Wiimote.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Wiimote.framework; path = ../other/wjoy/Wiimote/build/Debug/Wiimote.framework; sourceTree = "<group>"; };
 		A49333A9207A5FBC00CEDC42 /* PennyPincher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PennyPincher.framework; path = ../other/PennyPincher/build/Debug/PennyPincher.framework; sourceTree = "<group>"; };
@@ -141,6 +147,8 @@
 		A49333B9207A63D400CEDC42 /* Potterspell */ = {
 			isa = PBXGroup;
 			children = (
+				A42D94DD22CC3515005134C8 /* PotterspellSetupController.h */,
+				A42D94DE22CC3515005134C8 /* PotterspellSetupController.m */,
 				A49333BA207A63D400CEDC42 /* AppDelegate.h */,
 				A49333BB207A63D400CEDC42 /* AppDelegate.m */,
 				A49333BC207A63D400CEDC42 /* Assets.xcassets */,
@@ -151,6 +159,8 @@
 				A49333C2207A63D400CEDC42 /* SpellView.m */,
 				A49333C3207A63D400CEDC42 /* ViewController.h */,
 				A49333C4207A63D400CEDC42 /* ViewController.m */,
+				A42D94DB22C979E0005134C8 /* SpellStorage.swift */,
+				A42D94DA22C979E0005134C8 /* Potterspell-Bridging-Header.h */,
 			);
 			path = Potterspell;
 			sourceTree = "<group>";
@@ -223,7 +233,7 @@
 					A408C6D22071CB5800B3B7C5 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = V3B573VB3S;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					A408C6E82071CB5900B3B7C5 = {
@@ -294,9 +304,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A42D94DC22C979E0005134C8 /* SpellStorage.swift in Sources */,
 				A49333C9207A63D400CEDC42 /* main.m in Sources */,
 				A49333C5207A63D400CEDC42 /* AppDelegate.m in Sources */,
 				A49333CB207A63D400CEDC42 /* ViewController.m in Sources */,
+				A42D94DF22CC3515005134C8 /* PotterspellSetupController.m in Sources */,
 				A49333CA207A63D400CEDC42 /* SpellView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +359,7 @@
 		A408C6FB2071CB5900B3B7C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -369,6 +382,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -385,9 +399,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = Potterspell;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -395,6 +410,7 @@
 		A408C6FC2071CB5900B3B7C5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -417,6 +433,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -427,8 +444,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Potterspell;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -437,13 +455,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = V3B573VB3S;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Potterspell/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.poppyandzoey.Potterspell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Potterspell/Potterspell-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -452,13 +476,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = V3B573VB3S;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Potterspell/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.poppyandzoey.Potterspell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Potterspell/Potterspell-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -466,6 +495,7 @@
 		A408C7012071CB5900B3B7C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = V3B573VB3S;
@@ -481,6 +511,7 @@
 		A408C7022071CB5900B3B7C5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = V3B573VB3S;
@@ -496,6 +527,7 @@
 		A408C7042071CB5900B3B7C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = V3B573VB3S;
 				INFOPLIST_FILE = PotterspellUITests/Info.plist;
@@ -510,6 +542,7 @@
 		A408C7052071CB5900B3B7C5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = V3B573VB3S;
 				INFOPLIST_FILE = PotterspellUITests/Info.plist;

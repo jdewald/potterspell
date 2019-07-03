@@ -7,9 +7,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "Potterspell-Swift.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
-
+@property SpellStorage* spells;
 
 @end
 

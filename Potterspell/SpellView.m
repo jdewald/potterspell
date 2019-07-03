@@ -10,6 +10,7 @@
 
 @implementation SpellView
 
+
 -(void) awakeFromNib {
     self.pixels = [[NSMutableArray alloc] initWithCapacity:100];
         self.pixels2 = [[NSMutableArray alloc] initWithCapacity:100];

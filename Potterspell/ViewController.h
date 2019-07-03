@@ -9,6 +9,8 @@
 #import <Cocoa/Cocoa.h>
 #import "SpellView.h"
 
+@class SpellStorage;
+
 @interface ViewController : NSViewController
 
 @property (weak) IBOutlet SpellView* spellView;
@@ -19,5 +21,6 @@
 -(IBAction)clearButtonPressed:(id)sender;
 -(IBAction)recognizeTogglePressed:(id)sender;
 -(IBAction)toggleLiveMode:(id)sender;
+
 @end
 

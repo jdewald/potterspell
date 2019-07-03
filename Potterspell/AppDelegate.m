@@ -8,14 +8,24 @@
 
 #import "AppDelegate.h"
 
+
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
+-(id)init {
+    id f = [super init];
+    
+    self.spells = [[SpellStorage alloc] init];
+    return f;
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
+    
+
+
 }
 
 

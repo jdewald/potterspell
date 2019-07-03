@@ -11,14 +11,15 @@
 #import <OCLog/OCLog.h>
 #import "SpellView.h"
 #import <PennyPincher/PennyPincher-Swift.h>
-
+#import "Potterspell-Swift.h"
+#import "AppDelegate.h"
 
 @implementation ViewController {
     PennyPincher* pennyPincher;
     BOOL recognizing;
     BOOL liveMode;
     NSTimer *recognizeTimer;
-    NSMutableArray* templates;
+    SpellStorage* spells;
    
 }
 
@@ -30,7 +31,9 @@
     // Do any additional setup after loading the view.
     pennyPincher = [[PennyPincher alloc] init];
     recognizing = false;
-    templates = [[NSMutableArray alloc] initWithCapacity:10];
+    
+    spells = ((AppDelegate *)[[NSApplication sharedApplication] delegate]).spells;
+
 }
 
 
@@ -140,11 +143,12 @@
 //----
 - (void)addButtonPressed:(id)sender
 {
-    [templates addObject:[PennyPincher createTemplate:self.spellNameField.stringValue
-                          points:self.spellView.pixels]];
-    [self clearButtonPressed:sender];
 
-}
+    if (! [spells addSpellWithName:self.spellNameField.stringValue pixels:[self spellView].pixels]) {
+        NSLog(@"Unable to add spell!");
+    }
+    [self clearButtonPressed:sender];
+  }
 
 - (void) clearButtonPressed:(id)sender {
     [self.spellView clearPoints];
@@ -157,7 +161,7 @@
 }
 
 - (void) recognize {
-    PennyPincherResult* result =[PennyPincher recognize:[[self spellView].pixels copy] templates:templates];
+    PennyPincherResult* result =[PennyPincher recognize:[[self spellView].pixels copy] templates:spells.spellTemplates];
     if (result != nil) {
         NSLog(@"Recognize value: %@", result);
         self.recognizedSpellNameLabel.stringValue = result.template.id;
@@ -201,4 +205,6 @@
         NSLog(@"Exited live mode");
     }
 }
+
+
 @end
