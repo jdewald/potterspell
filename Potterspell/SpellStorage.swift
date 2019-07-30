@@ -39,7 +39,10 @@ import PennyPincher
             
             for spellName in spellDefs.keys {
                 for template in spellDefs[spellName]! {
-                    spellTemplates.append(PennyPincher.createTemplate(spellName, points: template.map{ CGPoint(x:$0[0],y:$0[1]) })!)
+                    spellTemplates.append(
+                        PennyPincherTemplate(id: spellName,
+                                        points: template.map{ CGPoint(x:$0[0],y:$0[1]) }))
+                   
                 }
             }
             return true

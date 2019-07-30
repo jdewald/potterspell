@@ -11,6 +11,7 @@
 		A408C6F92071CB5900B3B7C5 /* PotterspellUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A408C6F82071CB5900B3B7C5 /* PotterspellUITests.m */; };
 		A42D94DC22C979E0005134C8 /* SpellStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42D94DB22C979E0005134C8 /* SpellStorage.swift */; };
 		A42D94DF22CC3515005134C8 /* PotterspellSetupController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42D94DE22CC3515005134C8 /* PotterspellSetupController.m */; };
+		A48D495722CE8F9F00564600 /* PotterspellTestingController.m in Sources */ = {isa = PBXBuildFile; fileRef = A48D495622CE8F9F00564600 /* PotterspellTestingController.m */; };
 		A493335D2079F06000CEDC42 /* OCLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A493335B2079F06000CEDC42 /* OCLog.framework */; };
 		A493335E2079F06000CEDC42 /* Wiimote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A493335C2079F06000CEDC42 /* Wiimote.framework */; };
 		A49333AA207A5FBC00CEDC42 /* PennyPincher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A49333A9207A5FBC00CEDC42 /* PennyPincher.framework */; };
@@ -21,6 +22,10 @@
 		A49333C9207A63D400CEDC42 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A49333C0207A63D400CEDC42 /* main.m */; };
 		A49333CA207A63D400CEDC42 /* SpellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A49333C2207A63D400CEDC42 /* SpellView.m */; };
 		A49333CB207A63D400CEDC42 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A49333C4207A63D400CEDC42 /* ViewController.m */; };
+		A4B940C822E4E4AF0007F6FB /* PennyPincher.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A49333A9207A5FBC00CEDC42 /* PennyPincher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A4B940C922E4E4AF0007F6FB /* OCLog.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A493335B2079F06000CEDC42 /* OCLog.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A4B940CA22E4E4AF0007F6FB /* Wiimote.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A493335C2079F06000CEDC42 /* Wiimote.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A4D3D37D22D58EC1002419CB /* Starry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4D3D37C22D58EC1002419CB /* Starry.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A4B940C322E4E3510007F6FB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A4B940C822E4E4AF0007F6FB /* PennyPincher.framework in CopyFiles */,
+				A4B940C922E4E4AF0007F6FB /* OCLog.framework in CopyFiles */,
+				A4B940CA22E4E4AF0007F6FB /* Wiimote.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		A408C6D32071CB5800B3B7C5 /* Potterspell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Potterspell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A408C6E92071CB5900B3B7C5 /* PotterspellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PotterspellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +72,8 @@
 		A42D94DB22C979E0005134C8 /* SpellStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellStorage.swift; sourceTree = "<group>"; };
 		A42D94DD22CC3515005134C8 /* PotterspellSetupController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PotterspellSetupController.h; sourceTree = "<group>"; };
 		A42D94DE22CC3515005134C8 /* PotterspellSetupController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PotterspellSetupController.m; sourceTree = "<group>"; };
+		A48D495522CE8F9F00564600 /* PotterspellTestingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PotterspellTestingController.h; sourceTree = "<group>"; };
+		A48D495622CE8F9F00564600 /* PotterspellTestingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PotterspellTestingController.m; sourceTree = "<group>"; };
 		A493335B2079F06000CEDC42 /* OCLog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCLog.framework; path = ../other/wjoy/OCLog/build/Debug/OCLog.framework; sourceTree = "<group>"; };
 		A493335C2079F06000CEDC42 /* Wiimote.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Wiimote.framework; path = ../other/wjoy/Wiimote/build/Debug/Wiimote.framework; sourceTree = "<group>"; };
 		A49333A9207A5FBC00CEDC42 /* PennyPincher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PennyPincher.framework; path = ../other/PennyPincher/build/Debug/PennyPincher.framework; sourceTree = "<group>"; };
@@ -65,6 +87,7 @@
 		A49333C2207A63D400CEDC42 /* SpellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpellView.m; sourceTree = "<group>"; };
 		A49333C3207A63D400CEDC42 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A49333C4207A63D400CEDC42 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A4D3D37C22D58EC1002419CB /* Starry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Starry.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +170,7 @@
 		A49333B9207A63D400CEDC42 /* Potterspell */ = {
 			isa = PBXGroup;
 			children = (
+				A4D3D37B22D58EC1002419CB /* Images */,
 				A42D94DD22CC3515005134C8 /* PotterspellSetupController.h */,
 				A42D94DE22CC3515005134C8 /* PotterspellSetupController.m */,
 				A49333BA207A63D400CEDC42 /* AppDelegate.h */,
@@ -161,8 +185,18 @@
 				A49333C4207A63D400CEDC42 /* ViewController.m */,
 				A42D94DB22C979E0005134C8 /* SpellStorage.swift */,
 				A42D94DA22C979E0005134C8 /* Potterspell-Bridging-Header.h */,
+				A48D495522CE8F9F00564600 /* PotterspellTestingController.h */,
+				A48D495622CE8F9F00564600 /* PotterspellTestingController.m */,
 			);
 			path = Potterspell;
+			sourceTree = "<group>";
+		};
+		A4D3D37B22D58EC1002419CB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				A4D3D37C22D58EC1002419CB /* Starry.jpg */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +209,7 @@
 				A408C6CF2071CB5800B3B7C5 /* Sources */,
 				A408C6D02071CB5800B3B7C5 /* Frameworks */,
 				A408C6D12071CB5800B3B7C5 /* Resources */,
+				A4B940C322E4E3510007F6FB /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -279,6 +314,7 @@
 			files = (
 				A49333C6207A63D400CEDC42 /* Assets.xcassets in Resources */,
 				A49333C7207A63D400CEDC42 /* Main.storyboard in Resources */,
+				A4D3D37D22D58EC1002419CB /* Starry.jpg in Resources */,
 				A49333C8207A63D400CEDC42 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +345,7 @@
 				A49333C5207A63D400CEDC42 /* AppDelegate.m in Sources */,
 				A49333CB207A63D400CEDC42 /* ViewController.m in Sources */,
 				A42D94DF22CC3515005134C8 /* PotterspellSetupController.m in Sources */,
+				A48D495722CE8F9F00564600 /* PotterspellTestingController.m in Sources */,
 				A49333CA207A63D400CEDC42 /* SpellView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

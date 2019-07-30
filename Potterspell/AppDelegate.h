@@ -8,9 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 #import "Potterspell-Swift.h"
+#import <Wiimote/Wiimote.h>
+#import <OCLog/OCLog.h>
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 @property SpellStorage* spells;
+@property Wiimote *wiiMote;
 
 @end
 

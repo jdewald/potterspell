@@ -10,8 +10,10 @@
 #import "Potterspell-Swift.h"
 
 
-@interface PotterspellSetupController : NSViewController
+@interface PotterspellSetupController : NSViewController <NSTableViewDataSource,NSTableViewDelegate>
 -(IBAction)saveTemplates:(id)sender;
 -(IBAction)loadTemplates:(id)sender;
+@property (weak) IBOutlet NSTextField* wiiMoteInfoLabel;
+@property (weak) IBOutlet NSTableView* spellsView;
 @end
 

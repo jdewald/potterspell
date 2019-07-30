@@ -14,28 +14,37 @@
 #import "Potterspell-Swift.h"
 #import "AppDelegate.h"
 
+
 @implementation ViewController {
     PennyPincher* pennyPincher;
     BOOL recognizing;
     BOOL liveMode;
+    BOOL talkToDevices;
     NSTimer *recognizeTimer;
     SpellStorage* spells;
+    NSString* desiredSpell;
    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self attachToWiimote];
+    [self backgroundView].wantsLayer = true;
+    [self backgroundView].layer.contents = [NSImage imageNamed:@"Starry"];
+    [self recognizedSpellNameLabel].stringValue = @"";
+    
     
     // Do any additional setup after loading the view.
     pennyPincher = [[PennyPincher alloc] init];
     recognizing = false;
+    talkToDevices = true;
     
     spells = ((AppDelegate *)[[NSApplication sharedApplication] delegate]).spells;
-
 }
 
+- (void)viewWillAppear {
+    [((AppDelegate *)[[NSApplication sharedApplication] delegate]).wiiMote setDelegate:self];
+}
 
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];
@@ -44,79 +53,23 @@
 }
 
 
-
-- (id)attachToWiimote
-{
-    //self = [super init];
-    
-    if(self == nil)
-        return nil;
-    
-    // for debug output
-    [[OCLog sharedLog] setLevel:OCLogLevelDebug];
-    
-    [[NSNotificationCenter defaultCenter]
-     addObserver:self
-     selector:@selector(wiimoteConnectedNotification:)
-     name:WiimoteConnectedNotification
-     object:nil];
-    
-    [Wiimote setUseOneButtonClickConnection:YES]; // ;)
-    [Wiimote beginDiscovery]; // begin wait for new wiimotes (what not paired). 30 sec.
-    // If wiimote already paired, it can be connected without discovering.
-
-    
-    return self;
-}
-
-- (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-- (void)wiimoteConnectedNotification:(NSNotification*)notification
-{
-    Wiimote *wiimote = [notification object];
-    
-    // debug message
-    NSLog(@"Wiimote connected: %@ (%@)", [wiimote modelName], [wiimote addressString]);
-    
-    // begin listen events from wiimote (see WiimoteDelegate.h)
-    [wiimote setDelegate:self];
-    [[wiimote accelerometer] setEnabled:NO]; // and enable accelerometer
-    [wiimote setIREnabled:YES]; // we want to know about IR changes
-    
-}
-
-- (void)wiimote:(Wiimote*)wiimote accelerometerChangedGravityX:(CGFloat)x y:(CGFloat)y z:(CGFloat)z
-{
-    // raw accelerometer values.
-    // sensitivity can be changed by [[wiimot accelerometer] setGravitySmoothQuant: <value> ];
-    
-    NSLog(@"RAW: X: %f, Y: %f, Z: %f", x, y, x);
-}
-
-- (void)wiimote:(Wiimote*)wiimote accelerometerChangedPitch:(CGFloat)pitch roll:(CGFloat)roll
-{
-    // processed values
-    // sensitivity can be changed by [[wiimot accelerometer] setAnglesSmoothQuant: <value> ];
-    
-    NSLog(@"PROCESSED: PITCH: %f, ROLL: %f", pitch, roll);
-}
-
 - (void)wiimote:(Wiimote *)wiimote irPointPositionChanged:(WiimoteIRPoint *)point
 {
     NSPoint nsPoint = [point position];
     
     NSLog(@"Processed point change: %i, %f, %f", [point index], [point position].x, [point position].y);
-    if (point.index == 0) {
-        [self.spellView addPoint:nsPoint];
-    } else {
-        [self.spellView addPoint2:nsPoint];
+    
+    if ([point position].x < 1023 || [point position].y < 1023) {
+        if (point.index == 0) {
+            [self.spellView addPoint:nsPoint];
+        } else {
+            [self.spellView addPoint2:nsPoint];
 
+        }
+        
+        [[self spellView] setNeedsDisplay:YES];
+        [[self view] setNeedsDisplay:YES];
     }
-    [[self spellView] setNeedsDisplay:YES];
-    [[self view] setNeedsDisplay:YES];
     
     if (liveMode) {
         if (recognizeTimer != nil) {
@@ -156,6 +109,15 @@
     [[self view] setNeedsDisplay:YES];
 }
 
+//-- Test mode stuff
+-(void) pickNewSpell {
+    NSUInteger spellIndex = arc4random_uniform([[spells.spellDefs allKeys] count]);
+    desiredSpell = [spells.spellDefs allKeys][spellIndex];
+    self.recognizedSpellNameLabel.stringValue = [NSString stringWithFormat:@"CAST: %@", desiredSpell];
+}
+
+//--End test mode stuff
+
 - (void) startRecognizing {
     recognizing = true;
 }
@@ -164,15 +126,24 @@
     PennyPincherResult* result =[PennyPincher recognize:[[self spellView].pixels copy] templates:spells.spellTemplates];
     if (result != nil) {
         NSLog(@"Recognize value: %@", result);
-        self.recognizedSpellNameLabel.stringValue = result.template.id;
         
+        if (self.currentSpellMode == kTesting) {
+            if (result.template.id == desiredSpell) {
+                self.recognizedSpellNameLabel.stringValue = @"You got it!";
+                [self performSelector:@selector(pickNewSpell) withObject:nil afterDelay:2.0f];
+            }
+        } else {
+            self.recognizedSpellNameLabel.stringValue = result.template.id;
+        }
         
-        // Create the request.
-        NSString *baseURL = @"http://127.0.0.1:3000/";
-        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[baseURL stringByAppendingString:result.template.id]]];
-        
-        
-        NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+        if (talkToDevices) {
+            // Create the request.
+            NSString *baseURL = @"http://127.0.0.1:3000/";
+            NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[baseURL stringByAppendingString:result.template.id]]];
+            
+            
+            NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+        }
     }
 }
 - (void) recognizeTogglePressed:(id)sender {
@@ -202,6 +173,17 @@
         NSLog(@"Entered live mode");
     } else {
         liveMode = false;
+        NSLog(@"Exited live mode");
+    }
+}
+
+-(void) toggleTestMode:(id)sender {
+    if ([sender state] == NSOnState) {
+        self.currentSpellMode = kTesting;
+        NSLog(@"Entered test mode");
+        [self pickNewSpell];
+    } else {
+        self.currentSpellMode = kFree;
         NSLog(@"Exited live mode");
     }
 }
