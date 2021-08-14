@@ -4,7 +4,7 @@ UI for displaying magic spells and calling endpoints to act on recognized spells
 This is essentially just a naked commit of the code that I created as part of my daughter's Harry Potter-themed birthday party.
 There is a good chance that it no longer compiles as-is, but feel free to use it as you see fit.
 
-Description of the project can be found here: https://quay.wordpress.com/post/228
+Description of the project can be found here: https://quay.wordpress.com/2021/08/14/how-i-built-some-magic-wands/
 
 I would be happy to work with anyone who is interested in using or adapting this code and is unable to get what's here working for them.
 
