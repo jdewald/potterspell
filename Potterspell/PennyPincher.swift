@@ -1,5 +1,6 @@
 import Foundation
 
+// This is an adaptation of https://github.com/fe9lix/PennyPincher 
 
 @objc public class PennyPincherResult : NSObject {
     public var template: PennyPincherTemplate?
