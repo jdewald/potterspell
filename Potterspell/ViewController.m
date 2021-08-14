@@ -10,7 +10,6 @@
 #import <Wiimote/Wiimote.h>
 #import <OCLog/OCLog.h>
 #import "SpellView.h"
-#import <PennyPincher/PennyPincher-Swift.h>
 #import "Potterspell-Swift.h"
 #import "AppDelegate.h"
 

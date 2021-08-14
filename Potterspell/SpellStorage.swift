@@ -8,13 +8,11 @@
 
 import Foundation
 
-import PennyPincher
-
 @objc public class SpellStorage : NSObject {
-    var spellTemplates = [PennyPincherTemplate]()
-    var spellDefs: [String: [[[Double]]]] = [:]
+    @objc var spellTemplates = [PennyPincherTemplate]()
+    @objc var spellDefs: [String: [[[Double]]]] = [:]
     
-    func saveSpells(targetUrl: URL) -> Bool {
+    @objc func saveSpells(targetUrl: URL) -> Bool {
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: self.spellDefs, options: JSONSerialization.WritingOptions.prettyPrinted)
                 
@@ -29,7 +27,7 @@ import PennyPincher
         
     }
     
-    func loadSpells(targetUrl: URL) -> Bool {
+    @objc func loadSpells(targetUrl: URL) -> Bool {
         do {
             let jsonData = NSData.init(contentsOf: targetUrl)!
             
@@ -52,7 +50,7 @@ import PennyPincher
         }
     }
     
-    func addSpell(name: String, pixels:[CGPoint]) -> Bool {
+    @objc func addSpell(name: String, pixels:[CGPoint]) -> Bool {
         let template = PennyPincher.createTemplate(name, points:pixels)!
         
         var points = [[Double]]()

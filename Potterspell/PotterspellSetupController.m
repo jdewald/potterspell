@@ -28,6 +28,7 @@ SpellStorage* spells;
     [savePanel beginWithCompletionHandler:^(NSModalResponse result) {
         NSURL*  saveFilename = [savePanel URL];
         
+        
         [spells saveSpellsWithTargetUrl:saveFilename];
     }];
     
