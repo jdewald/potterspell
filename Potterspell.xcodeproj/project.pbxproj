@@ -1,0 +1,636 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A408C6EE2071CB5900B3B7C5 /* PotterspellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A408C6ED2071CB5900B3B7C5 /* PotterspellTests.m */; };
+		A408C6F92071CB5900B3B7C5 /* PotterspellUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A408C6F82071CB5900B3B7C5 /* PotterspellUITests.m */; };
+		A42D94DC22C979E0005134C8 /* SpellStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42D94DB22C979E0005134C8 /* SpellStorage.swift */; };
+		A42D94DF22CC3515005134C8 /* PotterspellSetupController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42D94DE22CC3515005134C8 /* PotterspellSetupController.m */; };
+		A48D495722CE8F9F00564600 /* PotterspellTestingController.m in Sources */ = {isa = PBXBuildFile; fileRef = A48D495622CE8F9F00564600 /* PotterspellTestingController.m */; };
+		A493335D2079F06000CEDC42 /* OCLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A493335B2079F06000CEDC42 /* OCLog.framework */; };
+		A493335E2079F06000CEDC42 /* Wiimote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A493335C2079F06000CEDC42 /* Wiimote.framework */; };
+		A49333AA207A5FBC00CEDC42 /* PennyPincher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A49333A9207A5FBC00CEDC42 /* PennyPincher.framework */; };
+		A49333C5207A63D400CEDC42 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A49333BB207A63D400CEDC42 /* AppDelegate.m */; };
+		A49333C6207A63D400CEDC42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A49333BC207A63D400CEDC42 /* Assets.xcassets */; };
+		A49333C7207A63D400CEDC42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A49333BD207A63D400CEDC42 /* Main.storyboard */; };
+		A49333C8207A63D400CEDC42 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A49333BF207A63D400CEDC42 /* Info.plist */; };
+		A49333C9207A63D400CEDC42 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A49333C0207A63D400CEDC42 /* main.m */; };
+		A49333CA207A63D400CEDC42 /* SpellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A49333C2207A63D400CEDC42 /* SpellView.m */; };
+		A49333CB207A63D400CEDC42 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A49333C4207A63D400CEDC42 /* ViewController.m */; };
+		A4B940C822E4E4AF0007F6FB /* PennyPincher.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A49333A9207A5FBC00CEDC42 /* PennyPincher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A4B940C922E4E4AF0007F6FB /* OCLog.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A493335B2079F06000CEDC42 /* OCLog.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A4B940CA22E4E4AF0007F6FB /* Wiimote.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A493335C2079F06000CEDC42 /* Wiimote.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A4D3D37D22D58EC1002419CB /* Starry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4D3D37C22D58EC1002419CB /* Starry.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A408C6EA2071CB5900B3B7C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A408C6CB2071CB5800B3B7C5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A408C6D22071CB5800B3B7C5;
+			remoteInfo = Potterspell;
+		};
+		A408C6F52071CB5900B3B7C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A408C6CB2071CB5800B3B7C5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A408C6D22071CB5800B3B7C5;
+			remoteInfo = Potterspell;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A4B940C322E4E3510007F6FB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A4B940C822E4E4AF0007F6FB /* PennyPincher.framework in CopyFiles */,
+				A4B940C922E4E4AF0007F6FB /* OCLog.framework in CopyFiles */,
+				A4B940CA22E4E4AF0007F6FB /* Wiimote.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A408C6D32071CB5800B3B7C5 /* Potterspell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Potterspell.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A408C6E92071CB5900B3B7C5 /* PotterspellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PotterspellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A408C6ED2071CB5900B3B7C5 /* PotterspellTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PotterspellTests.m; sourceTree = "<group>"; };
+		A408C6EF2071CB5900B3B7C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A408C6F42071CB5900B3B7C5 /* PotterspellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PotterspellUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A408C6F82071CB5900B3B7C5 /* PotterspellUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PotterspellUITests.m; sourceTree = "<group>"; };
+		A408C6FA2071CB5900B3B7C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A42D94DA22C979E0005134C8 /* Potterspell-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Potterspell-Bridging-Header.h"; sourceTree = "<group>"; };
+		A42D94DB22C979E0005134C8 /* SpellStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellStorage.swift; sourceTree = "<group>"; };
+		A42D94DD22CC3515005134C8 /* PotterspellSetupController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PotterspellSetupController.h; sourceTree = "<group>"; };
+		A42D94DE22CC3515005134C8 /* PotterspellSetupController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PotterspellSetupController.m; sourceTree = "<group>"; };
+		A48D495522CE8F9F00564600 /* PotterspellTestingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PotterspellTestingController.h; sourceTree = "<group>"; };
+		A48D495622CE8F9F00564600 /* PotterspellTestingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PotterspellTestingController.m; sourceTree = "<group>"; };
+		A493335B2079F06000CEDC42 /* OCLog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCLog.framework; path = ../other/wjoy/OCLog/build/Debug/OCLog.framework; sourceTree = "<group>"; };
+		A493335C2079F06000CEDC42 /* Wiimote.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Wiimote.framework; path = ../other/wjoy/Wiimote/build/Debug/Wiimote.framework; sourceTree = "<group>"; };
+		A49333A9207A5FBC00CEDC42 /* PennyPincher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PennyPincher.framework; path = ../other/PennyPincher/build/Debug/PennyPincher.framework; sourceTree = "<group>"; };
+		A49333BA207A63D400CEDC42 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A49333BB207A63D400CEDC42 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A49333BC207A63D400CEDC42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A49333BE207A63D400CEDC42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A49333BF207A63D400CEDC42 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A49333C0207A63D400CEDC42 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A49333C1207A63D400CEDC42 /* SpellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpellView.h; sourceTree = "<group>"; };
+		A49333C2207A63D400CEDC42 /* SpellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpellView.m; sourceTree = "<group>"; };
+		A49333C3207A63D400CEDC42 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A49333C4207A63D400CEDC42 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A4D3D37C22D58EC1002419CB /* Starry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Starry.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A408C6D02071CB5800B3B7C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A49333AA207A5FBC00CEDC42 /* PennyPincher.framework in Frameworks */,
+				A493335D2079F06000CEDC42 /* OCLog.framework in Frameworks */,
+				A493335E2079F06000CEDC42 /* Wiimote.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A408C6E62071CB5900B3B7C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A408C6F12071CB5900B3B7C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A408C6CA2071CB5800B3B7C5 = {
+			isa = PBXGroup;
+			children = (
+				A49333B9207A63D400CEDC42 /* Potterspell */,
+				A408C6EC2071CB5900B3B7C5 /* PotterspellTests */,
+				A408C6F72071CB5900B3B7C5 /* PotterspellUITests */,
+				A408C6D42071CB5800B3B7C5 /* Products */,
+				A408C7062071CB6A00B3B7C5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A408C6D42071CB5800B3B7C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A408C6D32071CB5800B3B7C5 /* Potterspell.app */,
+				A408C6E92071CB5900B3B7C5 /* PotterspellTests.xctest */,
+				A408C6F42071CB5900B3B7C5 /* PotterspellUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A408C6EC2071CB5900B3B7C5 /* PotterspellTests */ = {
+			isa = PBXGroup;
+			children = (
+				A408C6ED2071CB5900B3B7C5 /* PotterspellTests.m */,
+				A408C6EF2071CB5900B3B7C5 /* Info.plist */,
+			);
+			path = PotterspellTests;
+			sourceTree = "<group>";
+		};
+		A408C6F72071CB5900B3B7C5 /* PotterspellUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A408C6F82071CB5900B3B7C5 /* PotterspellUITests.m */,
+				A408C6FA2071CB5900B3B7C5 /* Info.plist */,
+			);
+			path = PotterspellUITests;
+			sourceTree = "<group>";
+		};
+		A408C7062071CB6A00B3B7C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A49333A9207A5FBC00CEDC42 /* PennyPincher.framework */,
+				A493335B2079F06000CEDC42 /* OCLog.framework */,
+				A493335C2079F06000CEDC42 /* Wiimote.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A49333B9207A63D400CEDC42 /* Potterspell */ = {
+			isa = PBXGroup;
+			children = (
+				A4D3D37B22D58EC1002419CB /* Images */,
+				A42D94DD22CC3515005134C8 /* PotterspellSetupController.h */,
+				A42D94DE22CC3515005134C8 /* PotterspellSetupController.m */,
+				A49333BA207A63D400CEDC42 /* AppDelegate.h */,
+				A49333BB207A63D400CEDC42 /* AppDelegate.m */,
+				A49333BC207A63D400CEDC42 /* Assets.xcassets */,
+				A49333BD207A63D400CEDC42 /* Main.storyboard */,
+				A49333BF207A63D400CEDC42 /* Info.plist */,
+				A49333C0207A63D400CEDC42 /* main.m */,
+				A49333C1207A63D400CEDC42 /* SpellView.h */,
+				A49333C2207A63D400CEDC42 /* SpellView.m */,
+				A49333C3207A63D400CEDC42 /* ViewController.h */,
+				A49333C4207A63D400CEDC42 /* ViewController.m */,
+				A42D94DB22C979E0005134C8 /* SpellStorage.swift */,
+				A42D94DA22C979E0005134C8 /* Potterspell-Bridging-Header.h */,
+				A48D495522CE8F9F00564600 /* PotterspellTestingController.h */,
+				A48D495622CE8F9F00564600 /* PotterspellTestingController.m */,
+			);
+			path = Potterspell;
+			sourceTree = "<group>";
+		};
+		A4D3D37B22D58EC1002419CB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				A4D3D37C22D58EC1002419CB /* Starry.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A408C6D22071CB5800B3B7C5 /* Potterspell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A408C6FD2071CB5900B3B7C5 /* Build configuration list for PBXNativeTarget "Potterspell" */;
+			buildPhases = (
+				A408C6CF2071CB5800B3B7C5 /* Sources */,
+				A408C6D02071CB5800B3B7C5 /* Frameworks */,
+				A408C6D12071CB5800B3B7C5 /* Resources */,
+				A4B940C322E4E3510007F6FB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Potterspell;
+			productName = Potterspell;
+			productReference = A408C6D32071CB5800B3B7C5 /* Potterspell.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A408C6E82071CB5900B3B7C5 /* PotterspellTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A408C7002071CB5900B3B7C5 /* Build configuration list for PBXNativeTarget "PotterspellTests" */;
+			buildPhases = (
+				A408C6E52071CB5900B3B7C5 /* Sources */,
+				A408C6E62071CB5900B3B7C5 /* Frameworks */,
+				A408C6E72071CB5900B3B7C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A408C6EB2071CB5900B3B7C5 /* PBXTargetDependency */,
+			);
+			name = PotterspellTests;
+			productName = PotterspellTests;
+			productReference = A408C6E92071CB5900B3B7C5 /* PotterspellTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A408C6F32071CB5900B3B7C5 /* PotterspellUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A408C7032071CB5900B3B7C5 /* Build configuration list for PBXNativeTarget "PotterspellUITests" */;
+			buildPhases = (
+				A408C6F02071CB5900B3B7C5 /* Sources */,
+				A408C6F12071CB5900B3B7C5 /* Frameworks */,
+				A408C6F22071CB5900B3B7C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A408C6F62071CB5900B3B7C5 /* PBXTargetDependency */,
+			);
+			name = PotterspellUITests;
+			productName = PotterspellUITests;
+			productReference = A408C6F42071CB5900B3B7C5 /* PotterspellUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A408C6CB2071CB5800B3B7C5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Joshua DeWald";
+				TargetAttributes = {
+					A408C6D22071CB5800B3B7C5 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = V3B573VB3S;
+						LastSwiftMigration = 1010;
+						ProvisioningStyle = Automatic;
+					};
+					A408C6E82071CB5900B3B7C5 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = V3B573VB3S;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A408C6D22071CB5800B3B7C5;
+					};
+					A408C6F32071CB5900B3B7C5 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = V3B573VB3S;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A408C6D22071CB5800B3B7C5;
+					};
+				};
+			};
+			buildConfigurationList = A408C6CE2071CB5800B3B7C5 /* Build configuration list for PBXProject "Potterspell" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A408C6CA2071CB5800B3B7C5;
+			productRefGroup = A408C6D42071CB5800B3B7C5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A408C6D22071CB5800B3B7C5 /* Potterspell */,
+				A408C6E82071CB5900B3B7C5 /* PotterspellTests */,
+				A408C6F32071CB5900B3B7C5 /* PotterspellUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A408C6D12071CB5800B3B7C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A49333C6207A63D400CEDC42 /* Assets.xcassets in Resources */,
+				A49333C7207A63D400CEDC42 /* Main.storyboard in Resources */,
+				A4D3D37D22D58EC1002419CB /* Starry.jpg in Resources */,
+				A49333C8207A63D400CEDC42 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A408C6E72071CB5900B3B7C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A408C6F22071CB5900B3B7C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A408C6CF2071CB5800B3B7C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A42D94DC22C979E0005134C8 /* SpellStorage.swift in Sources */,
+				A49333C9207A63D400CEDC42 /* main.m in Sources */,
+				A49333C5207A63D400CEDC42 /* AppDelegate.m in Sources */,
+				A49333CB207A63D400CEDC42 /* ViewController.m in Sources */,
+				A42D94DF22CC3515005134C8 /* PotterspellSetupController.m in Sources */,
+				A48D495722CE8F9F00564600 /* PotterspellTestingController.m in Sources */,
+				A49333CA207A63D400CEDC42 /* SpellView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A408C6E52071CB5900B3B7C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A408C6EE2071CB5900B3B7C5 /* PotterspellTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A408C6F02071CB5900B3B7C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A408C6F92071CB5900B3B7C5 /* PotterspellUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A408C6EB2071CB5900B3B7C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A408C6D22071CB5800B3B7C5 /* Potterspell */;
+			targetProxy = A408C6EA2071CB5900B3B7C5 /* PBXContainerItemProxy */;
+		};
+		A408C6F62071CB5900B3B7C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A408C6D22071CB5800B3B7C5 /* Potterspell */;
+			targetProxy = A408C6F52071CB5900B3B7C5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A49333BD207A63D400CEDC42 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A49333BE207A63D400CEDC42 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A408C6FB2071CB5900B3B7C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = Potterspell;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A408C6FC2071CB5900B3B7C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Potterspell;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A408C6FE2071CB5900B3B7C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = Potterspell/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.poppyandzoey.Potterspell;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Potterspell/Potterspell-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A408C6FF2071CB5900B3B7C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = Potterspell/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.poppyandzoey.Potterspell;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Potterspell/Potterspell-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		A408C7012071CB5900B3B7C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = V3B573VB3S;
+				INFOPLIST_FILE = PotterspellTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.poppyandzoey.PotterspellTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Potterspell.app/Contents/MacOS/Potterspell";
+			};
+			name = Debug;
+		};
+		A408C7022071CB5900B3B7C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = V3B573VB3S;
+				INFOPLIST_FILE = PotterspellTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.poppyandzoey.PotterspellTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Potterspell.app/Contents/MacOS/Potterspell";
+			};
+			name = Release;
+		};
+		A408C7042071CB5900B3B7C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = V3B573VB3S;
+				INFOPLIST_FILE = PotterspellUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.poppyandzoey.PotterspellUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Potterspell;
+			};
+			name = Debug;
+		};
+		A408C7052071CB5900B3B7C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = V3B573VB3S;
+				INFOPLIST_FILE = PotterspellUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.poppyandzoey.PotterspellUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Potterspell;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A408C6CE2071CB5800B3B7C5 /* Build configuration list for PBXProject "Potterspell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A408C6FB2071CB5900B3B7C5 /* Debug */,
+				A408C6FC2071CB5900B3B7C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A408C6FD2071CB5900B3B7C5 /* Build configuration list for PBXNativeTarget "Potterspell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A408C6FE2071CB5900B3B7C5 /* Debug */,
+				A408C6FF2071CB5900B3B7C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A408C7002071CB5900B3B7C5 /* Build configuration list for PBXNativeTarget "PotterspellTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A408C7012071CB5900B3B7C5 /* Debug */,
+				A408C7022071CB5900B3B7C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A408C7032071CB5900B3B7C5 /* Build configuration list for PBXNativeTarget "PotterspellUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A408C7042071CB5900B3B7C5 /* Debug */,
+				A408C7052071CB5900B3B7C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A408C6CB2071CB5800B3B7C5 /* Project object */;
+}
